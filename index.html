@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>AirSight.net Internal Helping Tool</title>
+
+    <meta name="author" content="Michael R. Youngblood" />
+
+    <meta name="robots" content="index, follow all" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+
+</head>
+<body>
+    <header>
+        AirSight.net Help Tool
+    </header>
+
+    <article>
+        <button id="activateNewRecordsButton">Activate New Record</button>
+        <button id="searchRecordsButton">Search Record</button>
+    </article>
+
+    <section id="searchRecordsDialog" title="Search For A Record">
+        Search For A Record
+        <form id="searchRecordsForm">
+            <label for="searchTerm">Search</label>
+            <input type="text" name="searchTerm" id="searchTerm" value="" placeholder="Search" />
+            <button type="submit">Search</button>
+        </form>
+    </section>
+
+    <section id="SearchResults" title="Search Results">
+        search results
+    </section>
+
+    <section id="activateNewRecordDialog" title="Activate New Record">
+        <form id="activateNewRecordForm">
+            <fieldset class="bordered bottomSpacing">
+                <legend>IP Address:Port Number</legend>
+                <input type="number" name="ip1" id="ip1" value="" placeholder="192" size="3" maxlength="3" min="0" max="255" class="required">.
+                <input type="number" name="ip2" id="ip2" value="" placeholder="168" size="3" maxlength="3" min="0" max="255" class="required">.
+                <input type="number" name="ip3" id="ip3" value="" placeholder="0" size="3" maxlength="3" min="0" max="255" class="required">.
+                <input type="number" name="ip4" id="ip4" value="" placeholder="1" size="3" maxlength="3" min="0" max="255" class="required">:
+                <input type="number" name="portNumber" id="portNumber" value="" placeholder="80" size="4" maxlength="5" min="0" max="99999" class="required">
+            </fieldset>
+            <fieldset class="bordered bottomSpacing">
+                <legend>Camera Type</legend>
+                <label><input type="radio" name="camType" id="MJPEG" value="MJPEG" checked>MJPEG</label>
+                <label><input type="radio" name="camType" id="H264" value="H264">H264</label>
+            </fieldset>
+
+            <label for="emailAddress">Email Address</label>
+            <input type="email" name="emailAddress" id="emailAddress" value="" placeholder="Customer's Email Address" width="100%" class="required">
+        </form>
+        <div id="validationSummary">
+            <ul id="errorMessageList"></ul>
+        </div>
+    </section>
+
+
+    <script type="text/javascript" src="js/libs/jquery-latest.pack.js"></script>
+    <script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/libs/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
