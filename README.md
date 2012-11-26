@@ -19,6 +19,11 @@ Note: If the supplied IP address is an external IP, then the user can update the
 
 
 
+Requested Possible Updates
+=================
+- More Comments to help explain code
+- use a tiny url generator
+- possibly mail the url to the email address to be provided if option is checked
 
 
 
